@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "check": "Inventory level",
+    "title": "Stock tracked per size on the Basic Hoodie Big Yale page",
+    "description": "The product page shows live inventory for each size of this specific product, read from the database: XS, L, and XXL are 'In stock', S and M show 'Only 5 left', and XL shows 'Only 2 left'. Those numbers match the inventory table (XS 15, S 5, M 5, L 8, XL 2, XXL 25), so the site tracks real stock per size.",
+    "image": "app_check_images/01-inventory-level-stock-tracked-per-size-on-the-basic-hoodie-b.jpg",
+    "page": "/products/basic-hoodie-big-yale",
+    "note": "This shows that the inventory is being track for each size and for a specific product.",
+    "captured_at": "2026-10-03 20:45:10"
+  },
+  {
+    "id": 2,
+    "check": "Search-result cards",
+    "title": "Asking the chat for hoodies fills the page with matching cards",
+    "description": "After the customer asked the chat 'What hoodies do you have?', the Products page updated itself to 'Hoodies, 27 matches' and shows a product card (image, name, price, short description) for every matching hoodie from the catalogue, such as the Basic Hoodie Big Yale at $68.00. The chat also shows its own small cards and tap-to-ask follow-ups. The 27 matches equal every hoodie in the database.",
+    "image": "app_check_images/02-search-result-cards-asking-the-chat-for-hoodies-fills-the-pa.jpg",
+    "page": "/products?view=chat",
+    "note": "This shows that the search result cards work.",
+    "captured_at": "2026-10-03 20:45:59"
+  },
+  {
+    "id": 3,
+    "check": "Problem 9 usability feature",
+    "title": "Handsome Dan chirps Harvard, politely",
+    "description": "A Problem 9 improvement: the assistant became Handsome Dan, a perky, engaging bulldog who teases Harvard without ever being rude. Asked 'Can we beat Harvard?', he answers 'Ruff! I'm backing Yale Blue, crimson just doesn't have the same bulldog swagger,' then steers back to shopping with tap-to-ask suggestions ('Show me Harvard-Yale gear', 'Show me Yale hoodies'). Dan's photo avatar and the cheering 'found it' Dan above the results are Problem 9 additions too.",
+    "image": "app_check_images/03-problem-9-usability-feature-handsome-dan-chirps-harvard-poli.jpg",
+    "page": "/products?view=chat",
+    "note": "I had Handsome Dan learn to make fun of Harvard politely as part of the Question 9 thing.",
+    "captured_at": "2026-10-03 20:46:46"
+  }
+]

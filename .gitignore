@@ -1,0 +1,30 @@
+# --- Secrets: never commit the real .env (copy .env.example instead) ---
+.env
+.env.*
+!.env.example
+
+# --- Private data: the shop database and product photos stay local ---
+/data/
+*.db
+*.sqlite
+*.sqlite3
+frontend/public/products/
+# Exported from the database by scripts/export_catalogue.py (a copy of catalogue data)
+frontend/src/data/catalogue.json
+
+# --- Dev-only files that can contain emails/tokens or are machine-specific ---
+backend/outbox/
+backend/bench_*.json
+
+# --- Dependencies and build output ---
+node_modules/
+frontend/dist/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# --- OS / editor ---
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Customs App Check</title>
+  <style>
+    body { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: #1a1f2b; background: #f5f6f8; margin: 0; line-height: 1.5; }
+    header { background: #00356b; color: #fff; padding: 1.5rem 1rem; }
+    header h1 { margin: 0 0 .25rem; }
+    main { max-width: 1000px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { border: 1px solid #dde1e6; padding: .5rem .75rem; text-align: left; }
+    th { background: #eceef1; }
+    td.pass { color: #1d6b3a; font-weight: 700; }
+    td.todo { color: #a12121; font-weight: 700; }
+    .check { background: #fff; border: 1px solid #dde1e6; border-radius: 10px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+    .check h2 { margin-top: 0; font-size: 1.2rem; color: #00356b; }
+    dl { display: grid; grid-template-columns: max-content 1fr; gap: .25rem 1rem; margin: 0 0 1rem; }
+    dt { font-weight: 700; }
+    dd { margin: 0; }
+    figure { margin: 0; }
+    img { width: 100%; height: auto; border: 1px solid #dde1e6; border-radius: 6px; }
+    figcaption { margin-top: .5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Campus Customs App Check</h1>
+    <div>Site testing screenshots taken live while the tester used the site (Homework 4, Problem 10).</div>
+  </header>
+  <main>
+    <h2>Required checks</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Status</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td>Inventory level</td><td class="pass">Covered</td><td><a href="#snap-1">Snap 1</a></td></tr><tr><td>Search-result cards</td><td class="pass">Covered</td><td><a href="#snap-2">Snap 2</a></td></tr><tr><td>Problem 9 usability feature</td><td class="pass">Covered</td><td><a href="#snap-3">Snap 3</a></td></tr>
+      </tbody>
+    </table>
+    <p>Each snap below lists the check it covers, the page it was taken on, the screenshot, and what it shows. Screenshots are in <code>app_check_images/</code>.</p>
+    
+    <section class="check" id="snap-1" data-check="Inventory level">
+      <h2>Snap 1: Inventory level: Stock tracked per size on the Basic Hoodie Big Yale page</h2>
+      <dl>
+        <dt>Check</dt><dd>Inventory level</dd>
+        <dt>Page</dt><dd><code>/products/basic-hoodie-big-yale</code></dd>
+        <dt>Captured</dt><dd>2026-10-03 20:45:10</dd><dt>Tester's note</dt><dd>This shows that the inventory is being track for each size and for a specific product.</dd>
+      </dl>
+      <figure>
+        <img src="app_check_images/01-inventory-level-stock-tracked-per-size-on-the-basic-hoodie-b.jpg" alt="Screenshot for Inventory level: Stock tracked per size on the Basic Hoodie Big Yale page">
+        <figcaption><strong>What this shows:</strong> The product page shows live inventory for each size of this specific product, read from the database: XS, L, and XXL are &#x27;In stock&#x27;, S and M show &#x27;Only 5 left&#x27;, and XL shows &#x27;Only 2 left&#x27;. Those numbers match the inventory table (XS 15, S 5, M 5, L 8, XL 2, XXL 25), so the site tracks real stock per size.</figcaption>
+      </figure>
+    </section>
+    <section class="check" id="snap-2" data-check="Search-result cards">
+      <h2>Snap 2: Search-result cards: Asking the chat for hoodies fills the page with matching cards</h2>
+      <dl>
+        <dt>Check</dt><dd>Search-result cards</dd>
+        <dt>Page</dt><dd><code>/products?view=chat</code></dd>
+        <dt>Captured</dt><dd>2026-10-03 20:45:59</dd><dt>Tester's note</dt><dd>This shows that the search result cards work.</dd>
+      </dl>
+      <figure>
+        <img src="app_check_images/02-search-result-cards-asking-the-chat-for-hoodies-fills-the-pa.jpg" alt="Screenshot for Search-result cards: Asking the chat for hoodies fills the page with matching cards">
+        <figcaption><strong>What this shows:</strong> After the customer asked the chat &#x27;What hoodies do you have?&#x27;, the Products page updated itself to &#x27;Hoodies, 27 matches&#x27; and shows a product card (image, name, price, short description) for every matching hoodie from the catalogue, such as the Basic Hoodie Big Yale at $68.00. The chat also shows its own small cards and tap-to-ask follow-ups. The 27 matches equal every hoodie in the database.</figcaption>
+      </figure>
+    </section>
+    <section class="check" id="snap-3" data-check="Problem 9 usability feature">
+      <h2>Snap 3: Problem 9 usability feature: Handsome Dan chirps Harvard, politely</h2>
+      <dl>
+        <dt>Check</dt><dd>Problem 9 usability feature</dd>
+        <dt>Page</dt><dd><code>/products?view=chat</code></dd>
+        <dt>Captured</dt><dd>2026-10-03 20:46:46</dd><dt>Tester's note</dt><dd>I had Handsome Dan learn to make fun of Harvard politely as part of the Question 9 thing.</dd>
+      </dl>
+      <figure>
+        <img src="app_check_images/03-problem-9-usability-feature-handsome-dan-chirps-harvard-poli.jpg" alt="Screenshot for Problem 9 usability feature: Handsome Dan chirps Harvard, politely">
+        <figcaption><strong>What this shows:</strong> A Problem 9 improvement: the assistant became Handsome Dan, a perky, engaging bulldog who teases Harvard without ever being rude. Asked &#x27;Can we beat Harvard?&#x27;, he answers &#x27;Ruff! I&#x27;m backing Yale Blue, crimson just doesn&#x27;t have the same bulldog swagger,&#x27; then steers back to shopping with tap-to-ask suggestions (&#x27;Show me Harvard-Yale gear&#x27;, &#x27;Show me Yale hoodies&#x27;). Dan&#x27;s photo avatar and the cheering &#x27;found it&#x27; Dan above the results are Problem 9 additions too.</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
